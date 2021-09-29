@@ -2,6 +2,7 @@ import os
 from discord.ext import commands
 from dotenv import load_dotenv
 import discord
+import random
 
 load_dotenv()
 
@@ -65,6 +66,9 @@ async def ban(ctx, user: discord.User):
 async def unban(ctx, user: discord.User):
     await user.unban()
 
+@bot.command()
+async def xkcd(ctx):
+    await ctx.send("https://xkcd.com/" + str(random.randint(1, 1000)))
 
 token = os.environ["DISCORD_TOKEN"]
 bot.run(token)  # Starts the bot
