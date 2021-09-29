@@ -59,6 +59,13 @@ async def admin(ctx, member: discord.Member):
     await ctx.send("Role Aded")
 
 @bot.command()
+async def mute(ctx, member: discord.Member):
+    if not [e for e in ctx.guild.roles if e.name == "ghost"]:
+        await ctx.guild.create_role(name="ghost", permissions=discord.Permissions(view_channel=False))
+    await member.add_roles([e for e in ctx.guild.roles if e.name == "ghost"  ][0])
+    await ctx.send("Muted")
+
+@bot.command()
 async def ban(ctx, user: discord.User):
     await user.ban()
 
