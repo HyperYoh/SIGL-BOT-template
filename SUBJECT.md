@@ -42,7 +42,7 @@
 - Extra mile : Instead of counting the members, list them sorted by status
 
 ### Administration
-[ ] When typing `!admin <A member nickname>`, your bot should create an Admin role (if it doesn't exists) on your server, allowing them to manage channels, kick and ban members, and give it to the member in parameter
+[X] When typing `!admin <A member nickname>`, your bot should create an Admin role (if it doesn't exists) on your server, allowing them to manage channels, kick and ban members, and give it to the member in parameter
 
 [ ] When typing `!mute <A member nickname>`, your bot should create a Ghost role (if it doesn't exists), disabling all textual channels permissions for that member. When typing that command towards an already muted member, the action should be reverted
 
