@@ -46,7 +46,7 @@
 
 [ ] When typing `!mute <A member nickname>`, your bot should create a Ghost role (if it doesn't exists), disabling all textual channels permissions for that member. When typing that command towards an already muted member, the action should be reverted
 
-[ ] When typing `!ban <A member nickname>`, your bot should ban that member from the server (**Test with caution**)
+[X] When typing `!ban <A member nickname>`, your bot should ban that member from the server (**Test with caution**)
 
 ### It's all fun and games
 [ ] When typing `!xkcd`, your post should post a random comic from https://xkcd.com
